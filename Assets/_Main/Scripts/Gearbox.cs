@@ -16,9 +16,22 @@ public class CraneMover : MonoBehaviour
 
         transform.localPosition = pos;
     }
-
     public void SetInput(float value)
     {
         input = value;
+    }
+    public void MoveLeft()
+    {
+        crane.SetInput(-1);
+    }
+
+    public void MoveRight()
+    {
+        crane.SetInput(1);
+    }
+
+    public void StopMove()
+    {
+        crane.SetInput(0);
     }
 }
