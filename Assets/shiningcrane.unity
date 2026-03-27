@@ -422,11 +422,11 @@ Transform:
   m_GameObject: {fileID: 335975277}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.85, y: 5.52, z: 0}
-  m_LocalScale: {x: 0.43431, y: 0.43431, z: 0.43431}
+  m_LocalPosition: {x: -0.019460535, y: 0.058382068, z: 0}
+  m_LocalScale: {x: 0.84519124, y: 0.84519124, z: 0.84519124}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1933565845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392685515
 GameObject:
@@ -438,6 +438,8 @@ GameObject:
   m_Component:
   - component: {fileID: 392685517}
   - component: {fileID: 392685516}
+  - component: {fileID: 392685519}
+  - component: {fileID: 392685518}
   m_Layer: 0
   m_Name: button_controller
   m_TagString: Untagged
@@ -519,6 +521,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &392685518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392685515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1148971988}
+          m_TargetAssemblyTypeName: UI_CraneInput, Assembly-CSharp
+          m_MethodName: StopMove
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &392685519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392685515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1148971988}
+        m_TargetAssemblyTypeName: UI_CraneInput, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1148971988}
+        m_TargetAssemblyTypeName: UI_CraneInput, Assembly-CSharp
+        m_MethodName: MoveRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &405270783
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +823,7 @@ Transform:
   m_GameObject: {fileID: 525175754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.79, y: 0, z: 0}
+  m_LocalPosition: {x: 1.15, y: 4.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -908,7 +1007,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148971986}
-  - component: {fileID: 1148971985}
+  - component: {fileID: 1148971988}
+  - component: {fileID: 1148971987}
   m_Layer: 0
   m_Name: UI_manager
   m_TagString: Untagged
@@ -916,19 +1016,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1148971985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148971984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02cd1293d5829b468f446b122584b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI_CraneInput
-  crane: {fileID: 0}
 --- !u!4 &1148971986
 Transform:
   m_ObjectHideFlags: 0
@@ -944,6 +1031,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148971987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148971984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06276b55e97d1bb48b45ecba7af50c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraneMover
+  speed: 3
+  limitX: 2.5
+--- !u!114 &1148971988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148971984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02cd1293d5829b468f446b122584b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_CraneInput
+  crane: {fileID: 1148971987}
 --- !u!1 &1265079352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933565845}
   - component: {fileID: 1933565844}
+  - component: {fileID: 1933565846}
   m_Layer: 0
   m_Name: gearbox
   m_TagString: Untagged
@@ -1763,9 +1878,24 @@ Transform:
   m_LocalPosition: {x: -2.84, y: 5.49, z: 0}
   m_LocalScale: {x: 0.51386, y: 0.51386, z: 0.51386}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 335975279}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1933565846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933565843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06276b55e97d1bb48b45ecba7af50c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CraneMover
+  speed: 3
+  limitX: 2.5
 --- !u!1 &2128061425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2003,7 +2133,6 @@ SceneRoots:
   - {fileID: 1063630770}
   - {fileID: 1933565845}
   - {fileID: 1568234287}
-  - {fileID: 335975279}
   - {fileID: 1338070479}
   - {fileID: 1341405638}
   - {fileID: 1743144834}
